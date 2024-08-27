@@ -83,7 +83,6 @@ void AMeleeCombatSystemCharacter::SetupPlayerInputComponent(class UInputComponen
 
 		//Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMeleeCombatSystemCharacter::Look);
-
 	}
 
 }
@@ -123,7 +122,3 @@ void AMeleeCombatSystemCharacter::Look(const FInputActionValue& Value)
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
 }
-
-
-
-
