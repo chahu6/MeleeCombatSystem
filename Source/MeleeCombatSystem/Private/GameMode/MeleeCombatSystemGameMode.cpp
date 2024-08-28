@@ -1,7 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "MeleeCombatSystemGameMode.h"
-#include "MeleeCombatSystemCharacter.h"
+#include "GameMode/MeleeCombatSystemGameMode.h"
+#include "Character/MeleeCombatSystemCharacter.h"
 #include "UObject/ConstructorHelpers.h"
 
 AMeleeCombatSystemGameMode::AMeleeCombatSystemGameMode()
