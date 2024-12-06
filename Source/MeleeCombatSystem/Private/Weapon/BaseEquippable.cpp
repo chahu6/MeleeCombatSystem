@@ -19,7 +19,7 @@ ABaseEquippable::ABaseEquippable()
 void ABaseEquippable::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 }
 
 void ABaseEquippable::Tick(float DeltaTime)
