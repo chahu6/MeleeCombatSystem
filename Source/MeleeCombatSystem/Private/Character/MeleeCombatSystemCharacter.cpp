@@ -83,6 +83,18 @@ void AMeleeCombatSystemCharacter::SetupPlayerInputComponent(class UInputComponen
 
 		//Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMeleeCombatSystemCharacter::Look);
+
+		if (UEnhancedInputLocalPlayerSubsystem* EnhancedInput = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(GetController<APlayerController>()->GetLocalPlayer()))
+		{
+			if (UEnhancedPlayerInput* PlayerInput = EnhancedInput->GetPlayerInput())
+			{
+				if (const FInputActionInstance* ActionData = PlayerInput->FindActionInstanceData(MoveAction))
+				{
+					ActionData->GetTriggeredTime();
+					ActionData->GetElapsedTime();
+				}
+			}
+		}
 	}
 
 }
